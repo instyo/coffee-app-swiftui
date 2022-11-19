@@ -11,6 +11,10 @@
 		44FCF783292904E900D9C76D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF782292904E900D9C76D /* ContentView.swift */; };
 		44FCF785292904EA00D9C76D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FCF784292904EA00D9C76D /* Assets.xcassets */; };
 		44FCF788292904EA00D9C76D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FCF787292904EA00D9C76D /* Preview Assets.xcassets */; };
+		44FCF7922929059600D9C76D /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF7912929059600D9C76D /* CoffeeShop.swift */; };
+		44FCF794292905DD00D9C76D /* CoffeeShopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF793292905DD00D9C76D /* CoffeeShopListView.swift */; };
+		44FCF796292905E900D9C76D /* CoffeeShopDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF795292905E900D9C76D /* CoffeeShopDetailView.swift */; };
+		44FCF7982929084300D9C76D /* CoffeeShopItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF7972929084300D9C76D /* CoffeeShopItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		44FCF782292904E900D9C76D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44FCF784292904EA00D9C76D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44FCF787292904EA00D9C76D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		44FCF7912929059600D9C76D /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
+		44FCF793292905DD00D9C76D /* CoffeeShopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListView.swift; sourceTree = "<group>"; };
+		44FCF795292905E900D9C76D /* CoffeeShopDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopDetailView.swift; sourceTree = "<group>"; };
+		44FCF7972929084300D9C76D /* CoffeeShopItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 		44FCF77F292904E900D9C76D /* CoffeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				44FCF78F2929056C00D9C76D /* Models */,
+				44FCF78E2929056700D9C76D /* Views */,
 				44FCF780292904E900D9C76D /* CoffeeAppApp.swift */,
 				44FCF782292904E900D9C76D /* ContentView.swift */,
 				44FCF784292904EA00D9C76D /* Assets.xcassets */,
@@ -65,6 +75,24 @@
 				44FCF787292904EA00D9C76D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		44FCF78E2929056700D9C76D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44FCF793292905DD00D9C76D /* CoffeeShopListView.swift */,
+				44FCF795292905E900D9C76D /* CoffeeShopDetailView.swift */,
+				44FCF7972929084300D9C76D /* CoffeeShopItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44FCF78F2929056C00D9C76D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44FCF7912929059600D9C76D /* CoffeeShop.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FCF794292905DD00D9C76D /* CoffeeShopListView.swift in Sources */,
 				44FCF783292904E900D9C76D /* ContentView.swift in Sources */,
 				44FCF781292904E900D9C76D /* CoffeeAppApp.swift in Sources */,
+				44FCF7922929059600D9C76D /* CoffeeShop.swift in Sources */,
+				44FCF796292905E900D9C76D /* CoffeeShopDetailView.swift in Sources */,
+				44FCF7982929084300D9C76D /* CoffeeShopItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5GXS6AYDN;
+				DEVELOPMENT_TEAM = R63X3UNG33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -298,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CoffeeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = Z5GXS6AYDN;
+				DEVELOPMENT_TEAM = R63X3UNG33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
