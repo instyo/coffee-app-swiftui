@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4469F96D293A2EAF00D9666A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4469F96C293A2EAF00D9666A /* MainView.swift */; };
+		44E5CF8F29367D0000AC1A0F /* ActivityView in Frameworks */ = {isa = PBXBuildFile; productRef = 44E5CF8E29367D0000AC1A0F /* ActivityView */; };
 		44FCF781292904E900D9C76D /* CoffeeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF780292904E900D9C76D /* CoffeeAppApp.swift */; };
 		44FCF783292904E900D9C76D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FCF782292904E900D9C76D /* ContentView.swift */; };
 		44FCF785292904EA00D9C76D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44FCF784292904EA00D9C76D /* Assets.xcassets */; };
@@ -18,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4469F96C293A2EAF00D9666A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		44FCF77D292904E900D9C76D /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FCF780292904E900D9C76D /* CoffeeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeAppApp.swift; sourceTree = "<group>"; };
 		44FCF782292904E900D9C76D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E5CF8F29367D0000AC1A0F /* ActivityView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +69,7 @@
 				44FCF782292904E900D9C76D /* ContentView.swift */,
 				44FCF784292904EA00D9C76D /* Assets.xcassets */,
 				44FCF786292904EA00D9C76D /* Preview Content */,
+				4469F96C293A2EAF00D9666A /* MainView.swift */,
 			);
 			path = CoffeeApp;
 			sourceTree = "<group>";
@@ -111,6 +116,9 @@
 			dependencies = (
 			);
 			name = CoffeeApp;
+			packageProductDependencies = (
+				44E5CF8E29367D0000AC1A0F /* ActivityView */,
+			);
 			productName = CoffeeApp;
 			productReference = 44FCF77D292904E900D9C76D /* CoffeeApp.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 44FCF774292904E900D9C76D;
+			packageReferences = (
+				44E5CF8D29367D0000AC1A0F /* XCRemoteSwiftPackageReference "ActivityView" */,
+			);
 			productRefGroup = 44FCF77E292904E900D9C76D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FCF794292905DD00D9C76D /* CoffeeShopListView.swift in Sources */,
+				4469F96D293A2EAF00D9666A /* MainView.swift in Sources */,
 				44FCF783292904E900D9C76D /* ContentView.swift in Sources */,
 				44FCF781292904E900D9C76D /* CoffeeAppApp.swift in Sources */,
 				44FCF7922929059600D9C76D /* CoffeeShop.swift in Sources */,
@@ -373,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		44E5CF8D29367D0000AC1A0F /* XCRemoteSwiftPackageReference "ActivityView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUI-Plus/ActivityView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44E5CF8E29367D0000AC1A0F /* ActivityView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E5CF8D29367D0000AC1A0F /* XCRemoteSwiftPackageReference "ActivityView" */;
+			productName = ActivityView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 44FCF775292904E900D9C76D /* Project object */;
 }

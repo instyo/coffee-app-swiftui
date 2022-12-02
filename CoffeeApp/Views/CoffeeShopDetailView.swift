@@ -13,49 +13,26 @@ struct CoffeeShopDetailView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(
-                colors: [.green, .indigo],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
+            Image("brewery")
+                .resizable()
+                .aspectRatio(1.0, contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.width, height: .infinity)
+                .overlay {
+                    Color.black.opacity(0.6)
+                }
+                .ignoresSafeArea()
             
-            VStack(alignment: .center) {
-                Image(coffeeShop.image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 200, height: 200)
-                    .clipShape(Circle())
-                    .overlay {
-                        ZStack {
-                            Circle().opacity(0.4)
-                            
-                            VStack(alignment: .center) {
-                                Image(systemName: "mappin.circle.fill")
-                                    .font(.system(size: 60))
-                                    .foregroundColor(.green)
-                                
-                                Text(coffeeShop.name)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .multilineTextAlignment(.center)
-                            }
-                        }
-                    }
-                
-                Text(coffeeShop.review)
-                    .font(.body)
-                    .multilineTextAlignment(.center)
+            ZStack(alignment: .center) {
+                Color.black
+                    .frame(width: .infinity, height: 200)
+                    .cornerRadius(15)
                     .padding()
                 
-                HStack {
-                    Image(systemName: "pin.circle.fill")
-                        .font(.title)
-                    
-                    Text(coffeeShop.location)
-                }
-                
-            }.padding()
+                Text("\(coffeeShop.name)\n\(coffeeShop.location)")
+                    .font(.largeTitle)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
+            }.padding([.horizontal], 20)
         }.ignoresSafeArea()
     }
 }

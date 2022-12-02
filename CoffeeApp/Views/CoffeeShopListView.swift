@@ -12,8 +12,14 @@ struct CoffeeShopListView: View {
     @State
     private var searchText: String = ""
     
+    @State
+    private var coffeeData = CoffeeShopProvider.all()
+    
+    @State
+    private var isLoading: Bool = true
+    
     private var coffeeSearchResults: [CoffeeShop] {
-        let results = CoffeeShopProvider.all()
+        let results = coffeeData
         
         if searchText.isEmpty {
             return results
@@ -31,17 +37,28 @@ struct CoffeeShopListView: View {
     // MARK : -Body
     
     var body: some View {
-        NavigationView {
-            List(coffeeSearchResults) { result in
+        List {
+            ForEach(coffeeSearchResults) { result in
                 NavigationLink (destination: {
                     CoffeeShopDetailView(coffeeShop: result)
                 }) {
                     CoffeeShopItemView(coffeeShop: result)
                 }
-
             }
-            .navigationTitle("CoffeeShop")
+            .onDelete { index in
+                coffeeData.remove(atOffsets: index)
+            }
+            .redacted(reason: isLoading ? .placeholder : [])
+            .onAppear {
+                fetchData()
+            }
+            .listRowSeparator(.hidden)
         }
+        .refreshable {
+            refreshData()
+        }
+        .listStyle(.plain)
+        .navigationTitle("CoffeeShop")
         .searchable(
             text: $searchText,
             placement: .navigationBarDrawer,
@@ -51,6 +68,20 @@ struct CoffeeShopListView: View {
                 Text("Looking for \(result.name)")
                     .searchCompletion(result.name)
             }
+        }
+        
+        
+    }
+    
+    func refreshData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            coffeeData = CoffeeShopProvider.all()
+        }
+    }
+    
+    func fetchData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            isLoading = false
         }
     }
 }
